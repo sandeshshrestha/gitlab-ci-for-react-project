@@ -17,6 +17,10 @@ test:
     - yarn test
   tags:
     - run_docker
+  only:
+    - branches
+  except:
+    - /^v\d+\.\d+\.\d+$/
 
 build:
   stage: push
